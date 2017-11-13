@@ -86,6 +86,8 @@ def play(board)
     counter += 1
      turn(board)
   end
+end
+
 def play(board)
   until over?(board)
     turn(board)
