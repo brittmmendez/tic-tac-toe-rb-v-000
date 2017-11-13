@@ -71,7 +71,7 @@ def draw?(board)
 end
 
 def over?(board)
-  draw?(board) ||won?(board)
+  won?(board)||draw?(board)
 end
 
 def winner(board)
@@ -81,7 +81,7 @@ def winner(board)
 end
 
 def play(board)
-  until over?(board)||won?(board)||full?(board)
+  until over?(board)
     turn(board)
   end
   if draw?(board)
