@@ -67,16 +67,16 @@ def full?(board)
 end
 
 def draw?(board)
-   !won?(board) && draw?(board)
+   !won?(board) && full?(board)
 end
 
 def over?(board)
-  won?(board)||full?(board)
+  won?(board)||draw?(board)
 end
 
 def winner(board)
   if won?(board)
-    winner=board[won?(board)[1]]
+    board[won?(board)[1]]
   end
 end
 
