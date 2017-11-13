@@ -76,7 +76,7 @@ end
 
 def winner(board)
   if won?(board)
-    board[won?(board)[1]]
+    winner=board[won?(board)[1]]
   end
 end
 
@@ -95,6 +95,6 @@ def play(board)
   if draw?(board)
   puts "Cat's Game!"
 else
-    puts "Congratulations"
+    puts "Congratulations #{winner}"
 end
 end
