@@ -79,20 +79,6 @@ def winner(board)
     winner=board[won?(board)[1]]
   end
 end
-def winner
-  @board
-game = TicTacToe.new
-  if won?
-  @board[won?[0]]
-  end
-end
-def play(board)
-   counter = 1
-   while counter <= 9
-    counter += 1
-     turn(board)
-  end
-end
 
 def play(board)
   until over?(board)
@@ -101,6 +87,6 @@ def play(board)
   if draw?(board)
   puts "Cat's Game!"
 else
-    puts "Congratulations #{winner}"
+    puts "Congratulations"
   end
 end
