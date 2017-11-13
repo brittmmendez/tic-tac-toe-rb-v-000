@@ -80,18 +80,3 @@ def winner(board)
   end
 end
 
-def play(board)
-  counter=0
-  until counter=8 ||over?(board)
-    counter+=1
-    turn(board)
-  end
-end
-
-if won?(board)
-  puts "Congrats #{winner(board)}"
-end
-
-if draw?(board)
-  puts "Cat's Game!"
-end
