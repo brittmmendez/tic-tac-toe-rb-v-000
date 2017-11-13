@@ -82,7 +82,7 @@ end
 
 def play(board)
   counter=0
-  until counter=8 ||over?(board) 
+  until counter=8 ||over?(board)
     counter+=1
     turn(board)
   end
