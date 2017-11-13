@@ -77,13 +77,8 @@ end
 def winner(board)
   if won?(board)
     board[won?(board)[1]]
-end
+  end
 end
 
 def play(board)
-  counter=1
-  while counter<=9
-    counter+=1
-    turn(board)
-  end
 end
