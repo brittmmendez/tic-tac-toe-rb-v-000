@@ -31,7 +31,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, current_player)
     display_board(board)
   else
     turn(board)
@@ -56,17 +56,7 @@ def turn_count(board)
     end
   end
 
-def play(board)
-  counter=1
-  while counter<=9
-    counter+=1
-    turn(board)
-  end
-end
-
-
-
-  def won?(board)
+def won?(board)
   WIN_COMBINATIONS.find do|w_combination|
     position_taken?(board, w_combination[1]) && board[w_combination[0]]==board[w_combination[1]] && board[w_combination[1]]==board[w_combination[2]]
     end
@@ -88,4 +78,12 @@ def winner(board)
   if won?(board)
     board[won?(board)[1]]
 end
+end
+
+def play(board)
+  counter=1
+  while counter<=9
+    counter+=1
+    turn(board)
+  end
 end
