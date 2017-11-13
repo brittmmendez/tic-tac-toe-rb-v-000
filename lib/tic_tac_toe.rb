@@ -13,23 +13,7 @@ end
 def input_to_index(user_input)
   user_input.to_i - 1
 end
-def turn_count(board)
-   counter = 0
-   board.each do |mark|
-     if mark == "X" || mark == "O"
-        counter += 1
-      end
-    end
-    return counter
-  end
 
-  def current_player(board)
-    if turn_count(board)%2==0
-      return "X"
-    elsif turn_count(board)%2==1
-      return "O"
-    end
-  end
 def move(board, index, current_player)
   board[index] = current_player
 end
@@ -54,6 +38,23 @@ def turn(board)
   end
 end
 
+def turn_count(board)
+   counter = 0
+   board.each do |mark|
+     if mark == "X" || mark == "O"
+        counter += 1
+      end
+    end
+    return counter
+  end
+
+  def current_player(board)
+    if turn_count(board)%2==0
+      return "X"
+    elsif turn_count(board)%2==1
+      return "O"
+    end
+  end
 
 def play(board)
   counter=1
@@ -62,6 +63,7 @@ def play(board)
     turn(board)
   end
 end
+
 
 
   def won?(board)
