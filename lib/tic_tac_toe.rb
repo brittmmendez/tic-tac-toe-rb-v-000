@@ -79,7 +79,7 @@ def winner(board)
     winning_player=board[won?(board)[1]]
   end
 end
-winning_player=board[won?(board)[1]]
+
 
 def play(board)
   until over?(board)
