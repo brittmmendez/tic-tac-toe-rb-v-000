@@ -81,14 +81,12 @@ def winner(board)
 end
 
 def play(board)
-  until over?(board)
+  until over?(board)||won?(board)
     turn(board)
   end
   if draw?(board)
   puts "Cat's Game!"
-elsif won?(board) && board[w_combination[0]]=="X"
-    puts "Congratulations X"
-  elsif won?(board) && board[w_combination[0]]=="O"
-      puts "Congratulations O"
+else
+    puts "Congratulations"
   end
 end
