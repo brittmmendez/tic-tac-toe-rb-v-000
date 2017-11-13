@@ -79,4 +79,3 @@ def winner(board)
     board[won?(board)[1]]
   end
 end
-
